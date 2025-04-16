@@ -144,4 +144,17 @@ Verificar que la base de datos test y la tabla customer con su registro siguen e
 <imag!![in3 3 8 1](https://github.com/user-attachments/assets/e421e469-c4ce-4197-ac94-feb03a43d826)
 
 ## 9. Resultados esperados:
+### Parte 1: Sin Volumen (Sin Persistencia).
+En esta parte, al crear el contenedor server_db1 sin asociar un volumen, se realizó la creación de la base de datos test y la tabla customer, con un registro insertado en dicha tabla. Sin embargo, al detener y eliminar el contenedor, los datos fueron perdidos. Al recrear el contenedor, la base de datos test y la tabla customer ya no existían, lo que demuestra que sin volúmenes asociados, los datos no persisten tras la eliminación del contenedor.
+<imag!![resultado 1](https://github.com/user-attachments/assets/a8a08e0a-9537-49d4-88fe-0fd551d7450f)
+
+### Parte 2: Con Volumen (Con Persistencia).
+En la segunda parte, se creó el contenedor server_db2 con un volumen pgdata asociado. Los datos se almacenaron en el volumen, y al eliminar el contenedor, el volumen permaneció intacto. Al recrear el contenedor y volver a asociar el volumen, los datos, incluida la base de datos test y la tabla customer, se mantuvieron, demostrando que los volúmenes aseguran la persistencia de los datos.
+<imag!![resultado 2](https://github.com/user-attachments/assets/20b90a01-e414-4ee7-a43b-87529ce3e601)
+
 ## 10. Bibliografía: 
+Docker, Inc. (2025). Docker documentation: Volumes. https://docs.docker.com/storage/volumes/
+The PostgreSQL Global Development Group. (2025). PostgreSQL documentation. https://www.postgresql.org/docs/
+Docker, Inc. (2025). Docker Cheat Sheet. https://www.docker.com/cheatsheet/
+
+
