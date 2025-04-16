@@ -34,14 +34,40 @@ Para completar esta práctica, el estudiante debe tener conocimientos en:
 3. Guía de la asignatura
 4. Cheat Sheet de comandos Linux y Docker
 ## 8. procedimiento
-### Paso 1: Crear el contenedor PostgreSQL
-Para iniciar, se creó un contenedor PostgreSQL sin volumen utilizando el siguiente comando en Docker este comando ejecuta PostgreSQL con una contraseña para el usuario postgres:
+# Parte 1: Base de datos sin volumen
+###  Crear contenedor PostgreSQL
+En el terminal de Play With Docker (PWD):
 ```
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
-### Paso 2: Crear base de datos y tabla
-En pgAdmin4, se creó la base de datos test y la tabla customer con los siguientes campos:
 ## Evidencia:
 <imag!
+### Crear base de datos y tabla
+Desde pgAdmin:
+1. Crear una base de datos llamada test.
+2. Dentro de test, crear una tabla customer con los campos:
+- id (tipo integer, primary key)
+- fullname (tipo text)
+- status (tipo text)
+Insertar un registro de prueba, por ejemplo:
+```
+INSERT INTO customer (id, fullname, status) VALUES (1, 'Juan Pérez', 'activo');
+````
+## Evidencia:
+<imag!
+### Eliminar el contenedor
+Vuelve a la terminal de PWD:
+```
+docker stop server_db1
+docker rm server_db1
+````
+## Evidencia:
+<imag!
+### Volver a crear el contenedor
+Cuando conectamos nuevamente con pgAdmin4. Veremos que la base de datos test y la tabla customer ya no existen. Esto demuestra que sin volumen, los datos no persisten.
+```
+docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
+````
+### 
 ## 9. Resultados esperados
 ## 10. Bibliografía
