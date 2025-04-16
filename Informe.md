@@ -88,7 +88,8 @@ docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 docker volume create pgdata
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 2 1](https://github.com/user-attachments/assets/c0db1d74-084b-4776-b177-ae50bd913e11)
+
 ### Crear el contenedor asociado al volumen:
 ```
 docker run --name server_db2 -e POSTGRES_PASSWORD=1234 -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres
