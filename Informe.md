@@ -95,7 +95,8 @@ docker volume create pgdata
 docker run --name server_db2 -e POSTGRES_PASSWORD=1234 -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 2 3](https://github.com/user-attachments/assets/ef432047-448f-474a-84fe-8a86733439f6)
+
 ### Crear base de datos y tabla igual que antes:
 - Base de datos: test.
 - Tabla: customer con los mismos campos.
@@ -104,7 +105,14 @@ Inserta un registro por ejemplo:
 INSERT INTO customer (id, fullname, status) VALUES (1, 'Ana Gómez', 'activo');
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 4](https://github.com/user-attachments/assets/5c9c222e-4a36-4e24-af42-9306844ad059)
+<imag!![in3 4 1](https://github.com/user-attachments/assets/7eda4fac-ea36-404c-a9f1-a890bcb9ac12)
+<imag!![in3 4 3](https://github.com/user-attachments/assets/6ca578a0-be1a-45d4-b8c9-b4a274087153)
+<imag!![in3 4 4](https://github.com/user-attachments/assets/8c9d4c30-892b-4741-b309-8bd950772b92)
+<imag!![in3 4 5](https://github.com/user-attachments/assets/6f06eeba-1b8a-4105-a559-57690224b4af)
+<imag!![in3 4 6](https://github.com/user-attachments/assets/0cfe99ca-e7e8-4768-a5a9-517d855f79fe)
+<imag!![in3 4 7](https://github.com/user-attachments/assets/2db3799a-964f-4755-afff-06f26842d46a)
+
 ### Detener y eliminar el contenedor:
 ```
 docker stop server_db2
