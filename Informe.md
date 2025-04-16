@@ -13,13 +13,26 @@ PostgreSQL es un sistema de gestión de bases de datos relacional de código abi
 - Bind mounts
 ## 4. Conocmientos previos
 Para completar esta práctica, el estudiante debe tener conocimientos en:
-- Manejo de navegador.
-- Comandos fundamentales de Docker.
-- Instalación y uso de clientes de base de datos como pgAdmin4.
-- Conceptos básicos de bases de datos relacionales y SQL.
-## 5. objetivo a alcanzar
+1. Manejo de navegador.
+2. Comandos fundamentales de Docker.
+3. Instalación y uso de clientes de base de datos como pgAdmin4.
+4. Conceptos básicos de bases de datos relacionales y SQL.
+## 5. Objetivo a alcanzar
+1. Comprender la diferencia entre contenedores con y sin volúmenes en términos de persistencia de datos.
+2. Crear y administrar contenedores PostgreSQL usando Docker.
+3. Crear y administrar volúmenes en Docker.
+4. Verificar la persistencia de una base de datos utilizando pgAdmin4 como herramienta cliente.
 ## 6. Eqipo necesario
+1. Computador con sistema operativo Windows.
+2. Navegador web moderno (Chrome, Firefox, etc.)
+3. Acceso a la plataforma https://labs.play-with-docker.com.
+4. Docker versión 20.x (PWD ya lo incluye).
+5. pgAdmin4 (local o versión online).
 ## 7. Material de apoyo
+1. Documentación oficial de Docker: https://docs.docker.com/storage/volumes/
+2. Documentación de PostgreSQL: https://www.postgresql.org/docs/
+3. Guía de la asignatura
+4. Cheat Sheet de comandos Linux y Docker
 ## 8. procedimiento
 ## 9. Resultados esperados
 ## 10. Bibliografía
