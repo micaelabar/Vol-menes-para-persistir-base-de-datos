@@ -11,7 +11,12 @@ PostgreSQL es un sistema de gestión de bases de datos relacional de código abi
 - Volúmenes nombrados (Named Volumes)
 - Volúmenes anónimos (Anonymous Volumes)
 - Bind mounts
-## 4. conocmientos previos
+## 4. Conocmientos previos
+Para completar esta práctica, el estudiante debe tener conocimientos en:
+- Manejo de navegador.
+- Comandos fundamentales de Docker.
+- Instalación y uso de clientes de base de datos como pgAdmin4.
+- Conceptos básicos de bases de datos relacionales y SQL.
 ## 5. objetivo a alcanzar
 ## 6. Eqipo necesario
 ## 7. Material de apoyo
