@@ -34,13 +34,13 @@ Para completar esta práctica, el estudiante debe tener conocimientos en:
 3. Guía de la asignatura
 4. Cheat Sheet de comandos Linux y Docker
 ## 8. Procedimiento:
-# Parte 1: Base de datos sin volumen.
+## Parte 1: Base de datos sin volumen.
 ###  Crear contenedor PostgreSQL:
 En el terminal de Play With Docker (PWD):
 ```
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
-## Evidencia:
+### Evidencia:
 <imag!
 ### Crear base de datos y tabla:
 Desde pgAdmin:
@@ -53,7 +53,7 @@ Insertar un registro de prueba, por ejemplo:
 ```
 INSERT INTO customer (id, fullname, status) VALUES (1, 'Juan Pérez', 'activo');
 ````
-## Evidencia:
+### Evidencia:
 <imag!
 ### Eliminar el contenedor:
 Vuelve a la terminal de PWD:
@@ -61,13 +61,55 @@ Vuelve a la terminal de PWD:
 docker stop server_db1
 docker rm server_db1
 ````
-## Evidencia:
+### Evidencia:
 <imag!
 ### Volver a crear el contenedor:
 Cuando conectamos nuevamente con pgAdmin4. Veremos que la base de datos test y la tabla customer ya no existen. Esto demuestra que sin volumen, los datos no persisten.
 ```
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
-### 
+### Evidencia:
+<imag!
+## Parte 2: Base de datos con volumen:
+### Crear un volumen:
+```
+docker volume create pgdata
+````
+### Evidencia:
+<imag!
+### Crear el contenedor asociado al volumen:
+```
+docker run --name server_db2 -e POSTGRES_PASSWORD=1234 -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres
+````
+### Evidencia:
+<imag!
+### Crear base de datos y tabla igual que antes:
+- Base de datos: test.
+- Tabla: customer con los mismos campos.
+Inserta un registro por ejemplo:
+```
+INSERT INTO customer (id, fullname, status) VALUES (1, 'Ana Gómez', 'activo');
+````
+### Evidencia:
+<imag!
+### Detener y eliminar el contenedor:
+```
+docker stop server_db2
+````
+```
+docker rm server_db2
+````
+### Evidencia:
+<imag!
+### Volver a crear el contenedor usando el mismo volumen:
+```
+docker run --name server_db2 -e POSTGRES_PASSWORD=1234 -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres
+````
+### Evidencia:
+<imag!
+### Conectarse otra vez desde pgAdmin4
+Verificar que la base de datos test y la tabla customer con su registro siguen existiendo. Esto demuestra que con volúmenes, los datos persisten incluso si el contenedor se elimina.
+### Evidencia:
+<imag!
 ## 9. Resultados esperados:
 ## 10. Bibliografía: 
