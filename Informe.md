@@ -41,7 +41,8 @@ En el terminal de Play With Docker (PWD):
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
 ### Evidencia:
-<imag!
+<imag!![in3](https://github.com/user-attachments/assets/95afa96b-236e-428e-9332-79a6935102c3)
+
 ### Crear base de datos y tabla:
 Desde pgAdmin:
 1. Crear una base de datos llamada test.
@@ -54,7 +55,16 @@ Insertar un registro de prueba, por ejemplo:
 INSERT INTO customer (id, fullname, status) VALUES (1, 'Juan Pérez', 'activo');
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 1](https://github.com/user-attachments/assets/875e4908-1e49-40ac-ab17-ec984677aeeb)
+
+<imag!![in3 2](https://github.com/user-attachments/assets/70e207ec-f174-4047-a996-1759da9fbbd7)
+<imag!![in3 3](https://github.com/user-attachments/assets/378f07ac-fb45-4950-9d9b-a6e6bcaea71c)
+<imag!![in3 4](https://github.com/user-attachments/assets/bbb9eee7-f9d8-4944-82c1-f15bc7fac5cd)
+<imag!![in3 5](https://github.com/user-attachments/assets/a7d88140-12b6-406d-a0a3-04b92cc92861)
+<imag!![in3 6](https://github.com/user-attachments/assets/5963b939-7fb4-410b-b8f1-469facac3121)
+<imag!![in3,7](https://github.com/user-attachments/assets/941e35a3-6196-440f-b060-d121b1833d91)
+<imag!![in3 8](https://github.com/user-attachments/assets/87d21574-5e30-4cf8-a61f-1ace36612a71)
+
 ### Eliminar el contenedor:
 Vuelve a la terminal de PWD:
 ```
@@ -62,14 +72,16 @@ docker stop server_db1
 docker rm server_db1
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 9](https://github.com/user-attachments/assets/58543d3d-f200-4699-9a59-6443bf89d137)
+
 ### Volver a crear el contenedor:
 Cuando conectamos nuevamente con pgAdmin4. Veremos que la base de datos test y la tabla customer ya no existen. Esto demuestra que sin volumen, los datos no persisten.
 ```
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
 ### Evidencia:
-<imag!
+<imag!![in3 10](https://github.com/user-attachments/assets/fbdc6225-f58c-40a7-a48c-7d51cc1e8336)
+
 ## Parte 2: Base de datos con volumen:
 ### Crear un volumen:
 ```
