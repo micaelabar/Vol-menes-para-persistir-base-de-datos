@@ -34,12 +34,14 @@ Para completar esta práctica, el estudiante debe tener conocimientos en:
 3. Guía de la asignatura
 4. Cheat Sheet de comandos Linux y Docker
 ## 8. procedimiento
-### Parte 1: Base de datos sin volumen:
-Creamos un contenedor llamado server_db1 que escucha en el puerto 5432.
-Comando:
+### Paso 1: Crear el contenedor PostgreSQL
+Para iniciar, se creó un contenedor PostgreSQL sin volumen utilizando el siguiente comando en Docker este comando ejecuta PostgreSQL con una contraseña para el usuario postgres:
 ```
 docker run --name server_db1 -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ````
-
+### Paso 2: Crear base de datos y tabla
+En pgAdmin4, se creó la base de datos test y la tabla customer con los siguientes campos:
+## Evidencia:
+<imag!
 ## 9. Resultados esperados
 ## 10. Bibliografía
