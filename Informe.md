@@ -34,5 +34,10 @@ Para completar esta práctica, el estudiante debe tener conocimientos en:
 3. Guía de la asignatura
 4. Cheat Sheet de comandos Linux y Docker
 ## 8. procedimiento
+### Parte 1: Base de datos sin volumen:
+Paso 1: Ejecutar el contenedor sin volumen
+´´´´
+docker run --name server_db1 -e POSTGRES_PASSWORD=admin -p 5432:5432 -d postgres
+´´´´
 ## 9. Resultados esperados
 ## 10. Bibliografía
